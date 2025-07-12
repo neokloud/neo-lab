@@ -1,5 +1,29 @@
 {
   "title": "Neo Lab",
   "description": "Install Argo CD on Kubernetes cluster using Helm (chart version 8.0.17) without CRDs",
-  "imageid": "kubernetes"
+  "icon": "assets/logo neokloud.png",
+  "details": {
+    "steps": [
+      {
+        "title": "Introduction",
+        "text": "intro.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [],
+    "uilayout": "terminal",
+    "uimessage": "",
+    "hideintro": false
+  },
+  "backend": {
+    "imageid": "kubernetes-k3s-1node"
+  }
 }
