@@ -1,25 +1,29 @@
 {
-  "title": "My Scenarios",
-  "scenarios": [
-    {
-      "title": "Mock 1",
-      "directory": "scenarios/mock-1"
+  "title": "Neo Lab",
+  "description": "Install Argo CD on Kubernetes cluster using Helm (chart version 8.0.17) without CRDs",
+  "icon": "assets/logo.png",
+  "details": {
+    "steps": [
+      {
+        "title": "Introduction",
+        "text": "intro.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
     },
-    {
-      "title": "Mock 2",
-      "directory": "scenarios/mock-2"
-    },
-    {
-      "title": "Mock 3",
-      "directory": "scenarios/mock-3"
-    },
-    {
-      "title": "Neo Lab",
-      "directory": "scenarios/neo-lab"
-    },
-    {
-      "title": "Mock 4",
-      "directory": "scenarios/mock-4"
+    "finish": {
+      "text": "finish.md"
     }
-  ]
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [],
+    "uilayout": "terminal",
+    "uimessage": "",
+    "hideintro": false
+  },
+  "backend": {
+    "imageid": "kubernetes-k3s-1node"
+  }
 }
