@@ -1,4 +1,5 @@
 {
   "title": "Neo Lab",
-  "description": "Install Argo CD on Kubernetes cluster using Helm (chart version 8.0.17) without CRDs"
+  "description": "Install Argo CD on Kubernetes cluster using Helm (chart version 8.0.17) without CRDs",
+  "imageid": "kubernetes"
 }
