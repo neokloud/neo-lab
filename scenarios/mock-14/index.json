@@ -1,0 +1,28 @@
+{
+  "title": "Mock 14",
+  "description": "Placeholder description for Mock 14 scenario",
+  "details": {
+    "steps": [
+      {
+        "title": "Introduction",
+        "text": "intro.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [],
+    "uilayout": "terminal",
+    "uimessage": "",
+    "hideintro": false
+  },
+  "backend": {
+    "imageid": "kubernetes-k3s-1node"
+  }
+}

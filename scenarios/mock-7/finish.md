@@ -1,3 +1,3 @@
-## Finished mock-7
+## Finished Mock 7
 
-Congratulations, you've completed mock-7!
+Well done completing Mock 7!

@@ -1,3 +1,3 @@
-# mock-7: Placeholder Introduction
+# Mock 7: Placeholder Introduction
 
-You can edit this file to add the question description.
+Details for Mock 7.

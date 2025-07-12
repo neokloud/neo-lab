@@ -1,3 +1,3 @@
-## Finished mock-8
+## Finished Mock 8
 
-Congratulations, you've completed mock-8!
+Well done completing Mock 8!
