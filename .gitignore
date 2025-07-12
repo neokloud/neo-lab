@@ -1,0 +1,14 @@
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Helm/temporary files
+*.tgz
+*.log
+
+# Ignore Kubernetes generated files
+argo-template.yaml

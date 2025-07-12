@@ -1,0 +1,18 @@
+{
+  "title": "Neo Lab Scenarios",
+  "description": "Practice scenarios for CKA preparation",
+  "scenarios": [
+    {
+      "title": "Mock 1 - Argo CD Helm Install",
+      "path": "scenarios/mock-1"
+    },
+    {
+      "title": "Mock 2 - TBD",
+      "path": "scenarios/mock-2"
+    },
+    {
+      "title": "Mock 3 - TBD",
+      "path": "scenarios/mock-3"
+    }
+  ]
+}
