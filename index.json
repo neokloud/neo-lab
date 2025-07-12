@@ -1,18 +1,18 @@
 {
-  "title": "Neo Lab Scenarios",
-  "description": "Mock Kubernetes CKA scenarios to practice Helm, Argo CD, Network Policies, Pod Security, and more.",
+  "title": "My Scenarios",
   "scenarios": [
     {
-      "title": "Mock 1 - Argo CD Installation using Helm",
-      "path": "scenarios/mock-1"
+      "title": "Mock 1",
+      "directory": "scenarios/mock-1"
     },
     {
-      "title": "Mock 2 - NetworkPolicy and Pod Isolation",
-      "path": "scenarios/mock-2"
+      "title": "Mock 2",
+      "directory": "scenarios/mock-2"
     },
     {
-      "title": "Mock 3 - Pod Security Policies and Admission Control",
-      "path": "scenarios/mock-3"
+      "title": "Mock 3",
+      "directory": "scenarios/mock-3"
     }
   ]
 }
+
