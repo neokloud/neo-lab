@@ -1,0 +1,21 @@
+{
+  "title": "My Scenarios",
+  "scenarios": [
+    { "title": "Neo Lab", "directory": "scenarios/neo-lab" },
+    { "title": "Mock 2", "directory": "scenarios/mock-2" },
+    { "title": "Mock 3", "directory": "scenarios/mock-3" },
+    { "title": "Mock 4", "directory": "scenarios/mock-4" },
+    { "title": "Mock 5", "directory": "scenarios/mock-5" },
+    { "title": "Mock 6", "directory": "scenarios/mock-6" },
+    { "title": "Mock 7", "directory": "scenarios/mock-7" },
+    { "title": "Mock 8", "directory": "scenarios/mock-8" },
+    { "title": "Mock 9", "directory": "scenarios/mock-9" },
+    { "title": "Mock 10", "directory": "scenarios/mock-10" },
+    { "title": "Mock 11", "directory": "scenarios/mock-11" },
+    { "title": "Mock 12", "directory": "scenarios/mock-12" },
+    { "title": "Mock 13", "directory": "scenarios/mock-13" },
+    { "title": "Mock 14", "directory": "scenarios/mock-14" },
+    { "title": "Mock 15", "directory": "scenarios/mock-15" },
+    { "title": "Mock 16", "directory": "scenarios/mock-16" }
+  ]
+}
