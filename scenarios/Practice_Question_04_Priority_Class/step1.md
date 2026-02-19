@@ -1,6 +1,6 @@
 # Busybox-Logger PriorityClass Scenario
 
-This scenario demonstrates creating a namespace, an existing PriorityClass, and a Deployment (`busybox-logger`) for CKA exam-style practice.
+This scenario demonstrates creating a namespace, an existing PriorityClass, and a Deployment (`busybox-logger`) 
 
 ---
 
