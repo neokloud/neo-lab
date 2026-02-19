@@ -1,6 +1,6 @@
 <div style="font-size:11px;">
 
-Create a new StorageClass named <b>local-path</b> with the provisioner <b>rancher.io/local-path</b>.<br><br>
+Create a new StorageClass named <b>local-path-k8s</b> with the provisioner <b>rancher.io/local-path</b>.<br><br>
 
 Set the <b>volumeBindingMode</b> to <b>WaitForFirstConsumer</b>.<br><br>
 
