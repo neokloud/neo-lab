@@ -4,11 +4,6 @@
 # FROM NEOKLOUD
 
 This repository contains CKA scenarios for practice.
-
-- `mock-1`: Argo CD Installation using Helm
-- `mock-2`: TBD
-- `mock-3`: TBD
-
 - `Practice_Question_01_Helm_ArgoCD
 - `Practice_Question_02_Cert_Manager_CRD
 - `Practice_Question_03_Storage_Class
