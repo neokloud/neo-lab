@@ -1,6 +1,6 @@
-# Context
+**Context
 You are working in a Kubernetes cluster with an existing Deployment named `busybox-logger` running in a namespace called `priority`.  
-The cluster already has at least one user-defined PriorityClass.
+The cluster already has at least one user-defined PriorityClass.**
 ---
 # Task
 Perform the following tasks:
