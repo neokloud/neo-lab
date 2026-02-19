@@ -1,11 +1,11 @@
 {
-  "title": "Mock 3",
-  "description": "Placeholder description for Mock 3 scenario",
+  "title": "04 PriorityClass",
+  "description": "Priority Class Explained",
   "details": {
     "steps": [
       {
-        "title": "Introduction",
-        "text": "intro.md"
+        "title": "Step 1",
+        "text": "step1.md"
       }
     ],
     "intro": {
