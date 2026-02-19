@@ -1,5 +1,5 @@
 {
-  "title": "Neo Lab",
+  "title": "01 Helm ArgoCD",
   "description": "Install Argo CD on Kubernetes cluster using Helm (chart version 8.0.17) without CRDs",
   "icon": "assets/logo.png",
   "details": {
