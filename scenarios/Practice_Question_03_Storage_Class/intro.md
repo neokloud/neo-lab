@@ -1,11 +1,9 @@
-<div style="font-size:11px;">
+### StorageClass Configuration Task
 
-Create a new StorageClass named <b>local-path-k8s</b> with the provisioner <b>rancher.io/local-path</b>.<br><br>
+Create a new StorageClass named **local-path-k8s** with the provisioner **rancher.io/local-path**.
 
-Set the <b>volumeBindingMode</b> to <b>WaitForFirstConsumer</b>.<br><br>
+Set the **volumeBindingMode** to **WaitForFirstConsumer**.
 
-Configure the StorageClass <b>local-path</b> as the default StorageClass.<br><br>
+Configure the StorageClass **local-path-k8s** as the default StorageClass.
 
 Do not modify any existing Deployments or PersistentVolumeClaims.
-
-</div>
