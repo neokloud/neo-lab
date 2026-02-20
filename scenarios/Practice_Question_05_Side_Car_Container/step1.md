@@ -7,24 +7,24 @@ kubectl apply -f - <<EOF
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: big-corp-app-deployment
+  name: neokloud-deployment
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: big-corp-app
+      app: neokloud
   template:
     metadata:
       labels:
-        app: big-corp-app
+        app: neokloud
     spec:
       containers:
         - name: monitor
           image: lfcert/monitor:latest
           env:
             - name: LOG_FILENAME
-              value: /var/log/big-corp.log
+              value: /var/log/neokloud.log
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
