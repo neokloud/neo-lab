@@ -6,6 +6,10 @@
       {
         "title": "Introduction",
         "text": "intro.md"
+      },
+      {
+        "title": "Step 1 - Scenario Creation",
+        "text": "step1.md"
       }
     ],
     "intro": {
