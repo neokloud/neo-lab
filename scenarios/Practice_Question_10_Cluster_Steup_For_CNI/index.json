@@ -1,11 +1,15 @@
 {
-  "title": "Mock 16",
-  "description": "Placeholder description for Mock 16 scenario",
+  "title": "10 Cluster Step up CNI",
+  "description": "Make cluster ready for cni",
   "details": {
     "steps": [
       {
         "title": "Introduction",
         "text": "intro.md"
+      },
+      {
+        "title": "Download cri-dockerd Package",
+        "text": "step1.md"
       }
     ],
     "intro": {
