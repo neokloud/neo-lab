@@ -1,11 +1,15 @@
 {
-  "title": "Mock 6",
-  "description": "Placeholder description for Mock 6 scenario",
+  "title": "07 PV PVC",
+  "description": "PV And PVC Creation",
   "details": {
     "steps": [
       {
         "title": "Introduction",
         "text": "intro.md"
+      },
+      {
+        "title": "Step 1 - Prepare Environment",
+        "text": "step1.md"
       }
     ],
     "intro": {
