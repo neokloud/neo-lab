@@ -1,11 +1,19 @@
 {
-  "title": "Mock 5",
-  "description": "Placeholder description for Mock 5 scenario",
+  "title": "08 Network Policy",
+  "description": "Understand Network Policy",
   "details": {
     "steps": [
       {
         "title": "Introduction",
         "text": "intro.md"
+      },
+      {
+        "title": "Step 1 - Prepare Environment",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Create NetworkPolicy Options",
+        "text": "step2.md"
       }
     ],
     "intro": {
