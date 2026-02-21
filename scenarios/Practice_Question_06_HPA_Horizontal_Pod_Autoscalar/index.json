@@ -1,11 +1,19 @@
 {
-  "title": "Mock 9",
-  "description": "Placeholder description for Mock 9 scenario",
+  "title": "06 HPA DEMO",
+  "description": "Lets get better in HPA",
   "details": {
     "steps": [
       {
         "title": "Introduction",
         "text": "intro.md"
+      },
+      {
+        "title": "Install Metrics Server",
+        "text": "step1.md"
+      },
+      {
+        "title": "Prepare Namespace and Deployment",
+        "text": "step2.md"
       }
     ],
     "intro": {
