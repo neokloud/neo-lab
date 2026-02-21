@@ -11,9 +11,13 @@ A NeoDB Deployment in the `neodb` namespace has been deleted by mistake. Your ta
 * Use the existing retained PersistentVolume (only one PV exists).
 ---
 # Modify the NeoDB Deployment
+
 The Deployment file is located at:
-`~/neodb-deployment.yaml`
-Update the Deployment to use the PVC `neodb` created in the previous step.
+
+~/neodb-deployment.yaml
+
+Update the Deployment to use the PVC neodb created in the previous step.
+
 Apply the updated Deployment to the cluster.
 ---
 # Validation
