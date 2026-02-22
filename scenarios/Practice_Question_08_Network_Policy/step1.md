@@ -1,53 +1,72 @@
-# Step 1 - Prepare Scenario Environment
+# Step 1: Prepare Namespaces and Deployments
 
-## Create Namespace
+## Create frontend Namespace
 
-```bash
-kubectl create namespace payments
+```id="qk19fr"
+kubectl create namespace frontend
 ```
 
-## Create Redis Deployment
+---
 
-```bash
-kubectl -n payments create deployment redis --image=redis:7
+## Create backend Namespace
+
+```id="n5cc8s"
+kubectl create namespace backend
 ```
 
-## Label Redis Pods
+---
 
-```bash
-kubectl -n payments label deployment redis app=redis --overwrite
-```
+## Create Frontend Deployment
 
-## Expose Redis Service
-
-```bash
-kubectl -n payments expose deployment redis --name=redis-svc --port=6379 --target-port=6379
-```
-
-## Create Payments Deployment
-
-```bash
-kubectl -n payments create deployment payments-app --image=busybox -- sleep 3600
-```
-
-## Label Payments Pods
-
-```bash
-kubectl -n payments label deployment payments-app app=payments --overwrite
-```
-
-## Apply Default Deny Egress Policy
-
-```bash
-kubectl apply -f - <<EOF
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
+```id="9p5n5k"
+cat <<EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: default-deny-egress
-  namespace: payments
+  name: frontend-deploy
+  namespace: frontend
 spec:
-  podSelector: {}
-  policyTypes:
-  - Egress
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: busybox
+        command: ["sh","-c","sleep 3600"]
+EOF
+```
+
+---
+
+## Create Backend Deployment (Listening on TCP 80)
+
+```id="q1s7yx"
+cat <<EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deploy
+  namespace: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: nginx
+        ports:
+        - containerPort: 80
 EOF
 ```
