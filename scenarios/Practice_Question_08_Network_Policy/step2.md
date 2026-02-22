@@ -1,84 +1,85 @@
-# Step 2 - Create NetworkPolicy Options
+# Step 1: Apply NetworkPolicy Options
 
-## Create Option A NetworkPolicy
+## Apply Option A
 
-```bash id="optA"
-kubectl apply -f - <<EOF
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: allow-redis-egress
-  namespace: payments
-spec:
-  podSelector:
-    matchLabels:
-      app: payments
-  policyTypes:
-  - Egress
-  egress:
-  - to:
-    - podSelector:
-        matchLabels:
-          app: redis
-      namespaceSelector:
-        matchLabels:
-          kubernetes.io/metadata.name: payments
-    ports:
-    - protocol: TCP
-      port: 6379
-EOF
 ```
-
-## Create Option B NetworkPolicy
-
-```bash id="optB"
-kubectl apply -f - <<EOF
+cat <<EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-redis
-  namespace: payments
+  name: allow-backend-ingress
+  namespace: backend
 spec:
   podSelector:
     matchLabels:
-      app: payments
+      app: backend
   policyTypes:
-  - Egress
-  egress:
-  - to:
-    - ipBlock:
-        cidr: 10.96.0.0/12
-    ports:
-    - protocol: TCP
-      port: 6379
-EOF
-```
-
-## Create Option C NetworkPolicy
-
-```bash id="optC"
-kubectl apply -f - <<EOF
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: payments-egress
-  namespace: payments
-spec:
-  podSelector:
-    matchLabels:
-      app: payments
-  policyTypes:
-  - Egress
-  egress:
-  - to:
+  - Ingress
+  ingress:
+  - from:
     - namespaceSelector:
         matchLabels:
-          kubernetes.io/metadata.name: payments
-      podSelector:
-        matchLabels:
-          app: redis
+          kubernetes.io/metadata.name: backend
     ports:
     - protocol: TCP
-      port: 6379
+      port: 80
+EOF
+```
+
+---
+
+## Apply Option B
+
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-backend-from-ip
+  namespace: backend
+spec:
+  podSelector:
+    matchLabels:
+      app: backend
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 10.0.0.0/8
+    ports:
+    - protocol: TCP
+      port: 80
+EOF
+```
+
+---
+
+## Apply Option C
+
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend-to-backend
+  namespace: backend
+spec:
+  podSelector:
+    matchLabels:
+      app: backend
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: frontend
+      podSelector:
+        matchLabels:
+          app: frontend
+    ports:
+    - protocol: TCP
+      port: 80
 EOF
 ```
