@@ -3,7 +3,7 @@
 ## Apply Option A
 
 ```
-cat <<EOF | kubectl apply -f -
+cat <<EOF > option-a.yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -31,7 +31,7 @@ EOF
 ## Apply Option B
 
 ```
-cat <<EOF | kubectl apply -f -
+cat <<EOF > option-b.yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -58,7 +58,7 @@ EOF
 ## Apply Option C
 
 ```
-cat <<EOF | kubectl apply -f -
+cat <<EOF > option-c.yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
