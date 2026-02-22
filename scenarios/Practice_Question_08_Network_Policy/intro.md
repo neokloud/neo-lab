@@ -1,23 +1,24 @@
-# NetworkPolicy Egress Control
+# NetworkPolicy: Restrict Frontend to Backend Communication
 
-You are working in a Kubernetes cluster.
+You are working on a Kubernetes cluster that contains two namespaces:
 
-The namespace `payments` already contains a **default-deny egress NetworkPolicy**, meaning no outbound traffic is allowed unless explicitly permitted.
+* `frontend`
+* `backend`
 
-Pods running payment workloads are labeled:
+Pods running in the `frontend` namespace use the label `app: frontend`.
 
-`app: payments`
+Pods running in the `backend` namespace use the label `app: backend` and expose an application listening on `TCP 80`.
 
-A Redis database is running inside the same namespace and is exposed through the Service:
+## Requirement
 
-`redis-svc.payments.svc.cluster.local`
+Configure a Kubernetes NetworkPolicy so that:
 
-## Task
+* Only Pods labeled `app: frontend`
+* From the `frontend` namespace
+* Are allowed to access Pods labeled `app: backend`
+* In the `backend` namespace
+* Using `TCP 80`
 
-Configure networking so that pods labeled `app=payments` can:
+All other incoming traffic to backend Pods must remain blocked.
 
-* connect **only** to Redis pods
-* communicate **only within** the `payments` namespace
-* use **TCP port `6379`**
-
-No other egress traffic must be allowed.
+Apply the most suitable NetworkPolicy to satisfy this requirement.
