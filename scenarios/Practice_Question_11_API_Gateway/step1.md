@@ -22,7 +22,7 @@ kubectl create secret tls tls-secret \
 kubectl get secret tls-secret
 
 ---
-```
+
 ## 4️⃣ Create Ingress YAML
 ```
 cat <<EOF > web-ingress.yaml
@@ -47,13 +47,16 @@ spec:
             port:
               number: 80
 EOF
+
 ```
+---
 ```
 kubectl apply -f web-ingress.yaml
 ```
 ---
 
 ## 5️⃣ Install Gateway API CRDs
+---
 ```
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.1.0/standard-install.yaml
 ```
@@ -70,6 +73,7 @@ spec:
   controllerName: k8s.io/nginx-gateway-controller
 EOF
 ```
+---
 ```
 kubectl apply -f gatewayclass.yaml
 ```
@@ -90,6 +94,7 @@ spec:
     port: 443
 EOF
 ```
+---
 ```
 kubectl apply -f web-gateway.yaml
 ```
