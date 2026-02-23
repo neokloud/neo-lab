@@ -1,11 +1,11 @@
 {
-  "title": "Mock 13",
-  "description": "Placeholder description for Mock 13 scenario",
+  "title": "13 Config TLS",
+  "description": "let get better with Config Maps",
   "details": {
     "steps": [
       {
-        "title": "Introduction",
-        "text": "intro.md"
+        "title": "Step 1",
+        "text": "step1.md"
       }
     ],
     "intro": {
