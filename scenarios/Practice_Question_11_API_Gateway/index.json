@@ -1,11 +1,11 @@
 {
-  "title": "Mock 11",
-  "description": "Placeholder description for Mock 11 scenario",
+  "title": "11 Api Gateway",
+  "description": "Lets get Better with Api Gateway",
   "details": {
     "steps": [
       {
-        "title": "Introduction",
-        "text": "intro.md"
+        "title": "Step 1 - Scenario Creation",
+        "text": "step1.md"
       }
     ],
     "intro": {
