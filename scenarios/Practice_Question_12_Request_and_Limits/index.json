@@ -1,11 +1,11 @@
 {
   "title": "12 Request and Limits",
-  "description": "Placeholder description for Mock 12 scenario",
+  "description": "Manage Kubernetes resource requests and limits for a WordPress Deployment",
   "details": {
     "steps": [
       {
-        "title": "Introduction",
-        "text": "intro.md"
+        "title": "Scenario Creation",
+        "text": "step1.md"
       }
     ],
     "intro": {
