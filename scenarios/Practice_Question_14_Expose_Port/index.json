@@ -1,11 +1,11 @@
 {
-  "title": "Mock 14",
-  "description": "Placeholder description for Mock 14 scenario",
+  "title": "14 Expose Port",
+  "description": "Expose the port ",
   "details": {
     "steps": [
       {
-        "title": "Introduction",
-        "text": "intro.md"
+        "title": "Step 1",
+        "text": "step1.md"
       }
     ],
     "intro": {
