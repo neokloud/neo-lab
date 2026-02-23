@@ -27,7 +27,7 @@ kubectl -n nginx-static describe secret nginx-tls
 ---
 
 ## Step 4: Create ConfigMap
-
+```
 vi nginx-config.yaml
 
 Add the following:
@@ -54,7 +54,7 @@ data:
     }
 
 kubectl apply -f nginx-config.yaml
-
+```
 ---
 
 ## Step 5: Create Deployment
