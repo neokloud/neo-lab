@@ -30,6 +30,13 @@ spec:
         image: wordpress:latest
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: "400m"
+            memory: "500Mi"
+          limits:
+            cpu: "500m"
+            memory: "600Mi"
       initContainers:
       - name: init-myservice
         image: busybox
