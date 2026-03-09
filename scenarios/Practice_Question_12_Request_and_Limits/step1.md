@@ -41,6 +41,7 @@ spec:
       - name: init-myservice
         image: busybox
         command: ['sh', '-c', 'echo Initializing...']
+        restartPolicy: OnFailure
 ```
 ---
 ## Step 2: Apply Deployment
